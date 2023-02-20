@@ -1,6 +1,6 @@
-# Calendar with functional composition
+# [Calendar with functional composition](https://github.com/UniBreakfast/calendar-functional-composition)
 
-This is a calendar example that uses functional composition to create an interactive calendar.
+[This is a calendar example](https://unibreakfast.github.io/calendar-functional-composition/) that uses functional composition to create an interactive calendar.
 
 ![image](https://user-images.githubusercontent.com/19654456/220205757-26ccd10e-89f9-4c7d-89c4-ef104d29cc10.png)
 
