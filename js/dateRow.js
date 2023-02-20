@@ -10,7 +10,10 @@ function buildDateRow(styles, date, weekBlock) {
   const nextBtn = document.createElement('button')
 
   const dateBox = buildDateBox(styles, date, monthNames)
+  const shift = step => shiftMonth(styles, date, weekBlock, monthNames, dateBox, prevBtn, nextBtn, step)
 
+  prevBtn.onclick = () => shift(-1)
+  nextBtn.onclick = () => shift(1)
   prevBtn.textContent = getFrom(monthNames, date.getMonth(), -1)
   nextBtn.textContent = getFrom(monthNames, date.getMonth(), 1)
 
@@ -19,11 +22,6 @@ function buildDateRow(styles, date, weekBlock) {
   Object.assign(dateRow.style, styles.dateRow)
   Object.assign(prevBtn.style, styles.monthBtn)
   Object.assign(nextBtn.style, styles.monthBtn)
-
-  prevBtn.onclick = () => 
-    shiftMonth(styles, date, weekBlock, -1, monthNames, dateBox, prevBtn, nextBtn)
-  nextBtn.onclick = () =>
-    shiftMonth(styles, date, weekBlock, 1, monthNames, dateBox, prevBtn, nextBtn)
 
   return dateRow
 }
